@@ -31,8 +31,6 @@ func main() {
 	initRouter()
 }
 
-
-
 func initRouter() {
 	app := fiber.New()
 
@@ -73,7 +71,7 @@ func initRouter() {
 				break
 			}
 
-			content += "user prompt: " + string(msg) + "\n"
+			content += "user prompt: " + string(msg)
 
 			resp, err := openaiClient.CreateChatCompletion(context.Background(), openai.ChatCompletionRequest{
 				Model: openai.GPT3Dot5Turbo,
@@ -175,7 +173,6 @@ func handler(c *fiber.Ctx) error {
 		}
 
 		allText += text
-		allText += "\n"
 	}
 
 	// Expected : save content to db
