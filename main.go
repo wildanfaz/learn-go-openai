@@ -197,7 +197,6 @@ func outputPdfText(inputPath string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-
 	defer f.Close()
 
 	pdfReader, err := model.NewPdfReader(f)
