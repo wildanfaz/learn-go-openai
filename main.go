@@ -99,7 +99,7 @@ func initRouter() {
 }
 
 func handler(c *fiber.Ctx) error {
-	fileHeader, err := c.FormFile("pdf")
+	fileHeader, err := c.FormFile("file")
 	if err != nil {
 		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{
 			"message": err.Error(),
