@@ -188,7 +188,7 @@ func hasPDFExtension(filename string) bool {
 }
 
 func initOpenAI() *openai.Client {
-	return openai.NewClient(os.Getenv("OPENAI_TOKEN"))
+	return openai.NewClient(os.Getenv("OPENAI_API_KEY"))
 }
 
 // outputPdfText prints out contents of PDF file to stdout.
