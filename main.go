@@ -74,7 +74,7 @@ func initRouter() {
 			content += "user prompt: " + string(msg)
 
 			resp, err := openaiClient.CreateChatCompletion(context.Background(), openai.ChatCompletionRequest{
-				Model: openai.GPT3Dot5Turbo,
+				Model: openai.GPT4o,
 				Messages: []openai.ChatCompletionMessage{
 					{
 						Role:    openai.ChatMessageRoleUser,
